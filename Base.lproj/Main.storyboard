@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-yS-DlM">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="0.18823529410000001" green="0.19215686269999999" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4q-bS-s5d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rbf-yS-DlM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="CwC-I6-39c"/>
+                            <constraint firstAttribute="trailing" secondItem="Rbf-yS-DlM" secondAttribute="trailing" constant="20" id="REf-Rv-jDQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Rbf-yS-DlM" secondAttribute="bottom" constant="20" id="jHw-4A-Tgj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="rJY-T6-E1l">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" title="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O2C-PU-wtl" customClass="ViewController" customModule="Transitions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kEb-CR-7nO"/>
+                        <viewControllerLayoutGuide type="bottom" id="TsL-aR-d93"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1P-gw-uww">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSS-IR-qVm">
+                                <rect key="frame" x="20" y="550" width="560" height="30"/>
+                                <state key="normal" title="Hide">
+                                    <color key="titleColor" red="0.92941176469999998" green="0.93725490199999995" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kaN-wG-oao" kind="unwind" unwindAction="unwindViewController:" id="eo2-Ro-AGS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.74901960779999999" green="0.75686274509999996" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="TsL-aR-d93" firstAttribute="top" secondItem="PSS-IR-qVm" secondAttribute="bottom" constant="20" id="Ldq-dy-rbP"/>
+                            <constraint firstAttribute="trailing" secondItem="PSS-IR-qVm" secondAttribute="trailing" constant="20" id="MfK-Ia-XcA"/>
+                            <constraint firstItem="PSS-IR-qVm" firstAttribute="leading" secondItem="I1P-gw-uww" secondAttribute="leading" constant="20" id="vQh-J0-w6l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUt-3d-1C6" sceneMemberID="firstResponder"/>
+                <exit id="kaN-wG-oao" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="185"/>
+        </scene>
+    </scenes>
+</document>
