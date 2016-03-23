@@ -1,5 +1,5 @@
 # Transitions
-A class which allows you to implement custom animations when transitioning between different view controllers
+A class which allows you to implement custom animations when transitioning between different views.
 
 ## Description
 There's a project which contains a TransitionManager class which allows you to easily create and use custom animations when transitioning between different views. 
@@ -10,6 +10,7 @@ In order to implement your own animation you need to modify the animateTransitio
 ## Don't Forget!
 To use the TransitionManager class properly you need to set the tansitioning delegates of the source and the destination view controllers. See the example ViewController.swift file included in the project for that.
 ## Note 
+It's supposed that both view controllers in the storyboard are of the same class.
 You can't use the TransitionManager class with custom segues created in storyboard. However, you can use it when you initialize a destination view controller by using command: 
     let secondViewController = storyboard!.instantiateViewControllerWithIdentifier("SecondViewController") as! UIViewController
 And then calling:
